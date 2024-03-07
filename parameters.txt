@@ -1,0 +1,53 @@
+PyMERRY PARAMETERS FILE
+
+WARNINGS !
+/!\ DO NOT ADD, DELETE OR MOVE LINES !
+/!\ ONLY MODIFY TEXTS AT THE RIGH OF ":" AT LINES MARKED WITH "->" !
+
+
+1 - INPUT FILES PATHS
+Indicate here paths (without spaces) for mesh, model and data files.
+-> mesh cells table  : input_data\mesh_cells_table.txt
+-> mesh nodes table  : input_data\mesh_nodes_table.txt
+-> resistivity model : input_data\model.txt
+-> data file         : input_data\ert_data.dat
+
+
+2 - OUTPUT DIRECTORY
+Indicate here the name of the directory for save the results. If the directory
+does not exist, it will be created.
+-> directory to save results : results
+
+
+3 - PyMERRY PARAMETERS
+Device accuracies in percentage (default: 0.2 %):
+-> resistivity-meter injection accuracy : 0.2
+-> resistivity-meter potential accuracy : 0.2
+
+Enter your choice for Depth Of Investigation (DOI) coefficient:
+-> DOI Apparao (A), or Baker (B)                             : B
+-> DOI Custom* (set a value (example 0.3) or none if unused) : none
+
+
+4 - PLOT PARAMETERS
+Enter parameters for display results.
+(default gamma = 0.25, cmin/cmax=from model):
+-> gamma                       : 0.25
+-> color bar min value (ohm-m) : from model
+-> color bar max value (ohm-m) : from model
+-> color bar in log scale      : False
+
+
+--------------------------------------------------------------------------
+|INFORMATION ABOUT CHOICE OF DOI COEFFICIENT (DEPTH OF INVESTIGATION)    |
+|                                                                        |
+|    array type            Roy & Apparao (1971)       Baker (1989)       |
+|                                                                        |
+|     Wenner                   0.11                     0.17             |
+|  Dipole-Dipole               0.195                     **              |
+|Wenner-Schlumberger           0.125                    0.19             |
+|                                                                        |
+|*  If DOI Custom is used, all DOIs (W, WS, DD) will take this value.    |
+|** The Dipole-Dipole DOI value is adaptative to the b/L ratio           |
+|   (see Baker, 1989).                                                   |
+--------------------------------------------------------------------------
